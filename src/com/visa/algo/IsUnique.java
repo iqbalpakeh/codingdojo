@@ -6,7 +6,7 @@ import java.util.Map;
 public class IsUnique {
 
     // O(n)
-    public static boolean isUniques(String input) {
+    public static boolean isUnique(String input) {
         Map<Character, Character> map = new HashMap<>();
         char[] chars = input.toCharArray();
         for (char c : chars) {
