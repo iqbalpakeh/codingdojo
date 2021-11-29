@@ -16,6 +16,11 @@ public class PermutationTest {
             String temp2 = "nua";
             Util.compare(false, Permutation.isPermutation(temp1, temp2));
         }
+        {
+            String temp1 = "abcdef";
+            String temp2 = "fedcba";
+            Util.compare(true, Permutation.isPermutation(temp1, temp2));
+        }
     }
 
 }

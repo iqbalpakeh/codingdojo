@@ -2,29 +2,20 @@ package com.visa.algo;
 
 public class Permutation {
 
-    public static boolean isPermutation(String sString, String tString) {
-        if (sString.length() != tString.length()) {
+    public static boolean isPermutation(String ss, String tt) {
+        if (ss.length() != tt.length()) {
             return false;
         }
 
-        // build array
-        int[] sCounter = new int[128];
-        int[] tCounter = new int[128];
+        int[] counter = new int[128];
 
-        char[] ss = sString.toCharArray();
-        char[] tt = tString.toCharArray();
-
-        // count each array occurrence
-        for (char s : ss) {
-            sCounter[s]++;
-        }
-        for (char t : tt) {
-            tCounter[t]++;
+        for (char s: ss.toCharArray()) {
+            counter[s]++;
         }
 
-        // check array
-        for (int i = 0; i < 128; i++) {
-            if (sCounter[i] != tCounter[i]) {
+        for (char t: tt.toCharArray()) {
+            counter[t]--;
+            if (counter[t] < 0) {
                 return false;
             }
         }
