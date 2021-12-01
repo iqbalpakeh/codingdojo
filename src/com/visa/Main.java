@@ -2,6 +2,7 @@ package com.visa;
 
 import com.visa.test.IsUniqueTest;
 import com.visa.test.PalindromePermutationTest;
+import com.visa.test.PalindromeTest;
 import com.visa.test.PermutationTest;
 
 public class Main {
@@ -10,5 +11,6 @@ public class Main {
         IsUniqueTest.test();
         PermutationTest.test();
         PalindromePermutationTest.test();
+        PalindromeTest.test();
     }
 }
