@@ -1,9 +1,6 @@
 package com.visa;
 
-import com.visa.test.IsUniqueTest;
-import com.visa.test.PalindromePermutationTest;
-import com.visa.test.PalindromeTest;
-import com.visa.test.PermutationTest;
+import com.visa.test.*;
 
 public class Main {
 
@@ -12,5 +9,6 @@ public class Main {
         PermutationTest.test();
         PalindromePermutationTest.test();
         PalindromeTest.test();
+        MaxConsecutiveOnesTest.test();
     }
 }
