@@ -1,6 +1,6 @@
-package com.visa.test;
+package com.visa.test.array;
 
-import com.visa.algo.DuplicateZero;
+import com.visa.algo.array.DuplicateZero;
 import com.visa.util.Util;
 
 public class DuplicateZeroTest {

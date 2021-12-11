@@ -1,4 +1,4 @@
-package com.visa.algo;
+package com.visa.algo.array;
 
 import java.util.HashMap;
 import java.util.Map;

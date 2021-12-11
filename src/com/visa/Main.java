@@ -1,17 +1,17 @@
 package com.visa;
 
-import com.visa.test.*;
+import com.visa.test.array.*;
 
 public class Main {
 
     public static void main(String[] args) {
-        // IsUniqueTest.test();
-        // PermutationTest.test();
-        // PalindromePermutationTest.test();
-        // PalindromeTest.test();
-        // MaxConsecutiveOnesTest.test();
-        // SortedSquareTest.test();
-        // DuplicateZeroTest.test();
+        IsUniqueTest.test();
+        PermutationTest.test();
+        PermutationTest.test();
+        PalindromeTest.test();
+        MaxConsecutiveOnesTest.test();
+        SortedSquareTest.test();
+        DuplicateZeroTest.test();
         MergeTest.test();
     }
 }

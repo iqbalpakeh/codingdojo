@@ -1,4 +1,4 @@
-package com.visa.algo;
+package com.visa.algo.array;
 
 /**
  * Given a fixed-length integer array arr, duplicate each occurrence of zero,

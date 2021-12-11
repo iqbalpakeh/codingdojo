@@ -1,6 +1,6 @@
-package com.visa.test;
+package com.visa.test.array;
 
-import com.visa.algo.IsUnique;
+import com.visa.algo.array.IsUnique;
 import com.visa.util.Util;
 
 public class IsUniqueTest {

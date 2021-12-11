@@ -1,6 +1,6 @@
-package com.visa.test;
+package com.visa.test.array;
 
-import com.visa.algo.SortedSquare;
+import com.visa.algo.array.SortedSquare;
 import com.visa.util.Util;
 
 public class SortedSquareTest {

@@ -1,6 +1,6 @@
-package com.visa.test;
+package com.visa.test.array;
 
-import com.visa.algo.PalindromePermutation;
+import com.visa.algo.array.PalindromePermutation;
 import com.visa.util.Util;
 
 public class PalindromePermutationTest {

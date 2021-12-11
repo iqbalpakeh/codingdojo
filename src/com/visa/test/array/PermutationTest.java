@@ -1,6 +1,6 @@
-package com.visa.test;
+package com.visa.test.array;
 
-import com.visa.algo.Permutation;
+import com.visa.algo.array.Permutation;
 import com.visa.util.Util;
 
 public class PermutationTest {

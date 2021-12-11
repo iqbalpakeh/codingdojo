@@ -1,4 +1,4 @@
-package com.visa.algo;
+package com.visa.algo.array;
 
 public class Palindrome {
 

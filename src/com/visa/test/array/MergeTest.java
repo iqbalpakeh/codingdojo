@@ -1,6 +1,6 @@
-package com.visa.test;
+package com.visa.test.array;
 
-import com.visa.algo.Merge;
+import com.visa.algo.array.Merge;
 import com.visa.util.Util;
 
 public class MergeTest {

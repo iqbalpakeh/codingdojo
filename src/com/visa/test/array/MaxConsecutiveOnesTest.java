@@ -1,6 +1,6 @@
-package com.visa.test;
+package com.visa.test.array;
 
-import com.visa.algo.MaxConsecutiveOnes;
+import com.visa.algo.array.MaxConsecutiveOnes;
 import com.visa.util.Util;
 
 public class MaxConsecutiveOnesTest {
