@@ -35,8 +35,13 @@ public class Merge {
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m + n; j++) {
-                if (nums2[i] < nums1[j]) {
+                if (nums2[i] <= nums1[j]) {
                     insert(nums1, nums2[i], j);
+                    break;
+                }
+                if (j > m) {
+                    nums1[j] = nums2[i];
+                    break;
                 }
             }
         }
