@@ -40,7 +40,7 @@ public class Merge {
                     break;
                 }
                 if (j > m) {
-                    nums1[j] = nums2[i];
+                    // nums1[j] = nums2[i]; ....
                 }
             }
         }
