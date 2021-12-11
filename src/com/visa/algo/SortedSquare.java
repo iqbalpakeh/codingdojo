@@ -48,27 +48,24 @@ public class SortedSquare {
         return pos;
     }
 
-    // 1, 16
-    // 0, 9, 100
-
-    // 0, 1, 9
-
     private static int[] mergeArray(int[] arrA, int[] arrB) {
         int newLength = arrA.length + arrB.length;
         int[] arrNew = new int[newLength];
         int ia = 0;
         int ib = 0;
         for (int i = 0; i < newLength; i++) {
+            if (ia == arrA.length) {
+                arrNew[i] = arrB[ib++];
+                continue;
+            }
+            if (ib == arrB.length) {
+                arrNew[i] = arrA[ia++];
+                continue;
+            }
             if (arrA[ia] < arrB[ib]) {
-                arrNew[i] = arrA[ia];
-                if (ia < arrA.length - 1) {
-                    ia++;
-                }
+                arrNew[i] = arrA[ia++];
             } else {
-                arrNew[i] = arrB[ib];
-                if (ib < arrB.length - 1) {
-                    ib++;
-                }
+                arrNew[i] = arrB[ib++];
             }
         }
         return arrNew;
