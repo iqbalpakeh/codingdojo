@@ -10,5 +10,6 @@ public class Main {
         PalindromePermutationTest.test();
         PalindromeTest.test();
         MaxConsecutiveOnesTest.test();
+        SortedSquareTest.test();
     }
 }
