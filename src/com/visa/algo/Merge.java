@@ -41,7 +41,6 @@ public class Merge {
                 }
                 if (j > m) {
                     nums1[j] = nums2[i];
-                    break;
                 }
             }
         }
