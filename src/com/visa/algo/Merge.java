@@ -33,14 +33,18 @@ package com.visa.algo;
 public class Merge {
 
     public static void merge(int[] nums1, int m, int[] nums2, int n) {
+        int lastOffset = m - 1;
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m + n; j++) {
                 if (nums2[i] <= nums1[j]) {
                     insert(nums1, nums2[i], j);
+                    lastOffset++;
                     break;
                 }
-                if (j > m) {
-                    // nums1[j] = nums2[i]; ....
+                if (j > lastOffset) {
+                    nums1[j] = nums2[i];
+                    lastOffset++;
+                    break;
                 }
             }
         }
