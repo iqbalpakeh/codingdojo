@@ -21,10 +21,10 @@ public class SortedSquare {
             return squareArray(nums);
         }
 
-        int[] arrLow = new int[offset - 1];
+        int[] arrLow = new int[offset];
         int[] arrHigh = new int[nums.length - offset];
 
-        arrLow = copyArray(nums, arrLow, 0, offset - 1);
+        arrLow = copyArray(nums, arrLow, 0, offset);
         arrLow = squareArray(arrLow);
         arrLow = reverseArray(arrLow);
 
@@ -48,19 +48,24 @@ public class SortedSquare {
         return pos;
     }
 
+    // 1, 16
+    // 0, 9, 100
+
+    // 0, 1, 9
+
     private static int[] mergeArray(int[] arrA, int[] arrB) {
         int newLength = arrA.length + arrB.length;
         int[] arrNew = new int[newLength];
         int ia = 0;
         int ib = 0;
         for (int i = 0; i < newLength; i++) {
-            if (arrA[ia] > arrB[ib]) {
+            if (arrA[ia] < arrB[ib]) {
                 arrNew[i] = arrA[ia];
                 if (ia < arrA.length - 1) {
                     ia++;
                 }
             } else {
-                arrNew[i] = arrA[ib];
+                arrNew[i] = arrB[ib];
                 if (ib < arrB.length - 1) {
                     ib++;
                 }
@@ -71,7 +76,7 @@ public class SortedSquare {
 
     private static int[] reverseArray(int[] arr) {
         int temp;
-        for (int i = 0; i < arr.length; i++) {
+        for (int i = 0; i < arr.length / 2; i++) {
             temp = arr[arr.length - i - 1];
             arr[arr.length - i - 1] = arr[i];
             arr[i] = temp;
@@ -81,7 +86,7 @@ public class SortedSquare {
 
     private static int[] copyArray(int[] src, int[] dst, int start, int length) {
         for (int i = start; i < start + length; i++) {
-            dst[i] = src[i];
+            dst[i - start] = src[i];
         }
         return dst;
     }
