@@ -32,8 +32,21 @@ package com.visa.algo;
  */
 public class Merge {
 
-    public void merge(int[] nums1, int m, int[] nums2, int n) {
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m + n; j++) {
+                if (nums2[i] < nums1[j]) {
+                    insert(nums1, nums2[i], j);
+                }
+            }
+        }
+    }
 
+    private static void insert(int[] arr, int val, int offset) {
+        for (int i = arr.length - 2; i >= offset; i--) {
+            arr[i + 1] = arr[i];
+        }
+        arr[offset] = val;
     }
 
 }
