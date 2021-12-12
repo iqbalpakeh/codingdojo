@@ -35,17 +35,17 @@ public class RemoveElement {
         int k = nums.length;
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] == val) {
-                k = removeElementByOffset(nums, i, k - 1);
+                k = removeElementByOffset(nums, i, k);
             }
         }
         return k;
     }
 
-    private static int removeElementByOffset(int[] nums, int offset, int lastOffset) {
-        for (int i = offset; i < lastOffset; i++) {
+    private static int removeElementByOffset(int[] nums, int offset, int size) {
+        for (int i = offset; i < size - 1; i++) {
             nums[i] = nums[i + 1];
         }
-        return --lastOffset;
+        return --size;
     }
 
 }

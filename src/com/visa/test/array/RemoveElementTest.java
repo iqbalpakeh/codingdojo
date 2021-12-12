@@ -12,7 +12,26 @@ public class RemoveElementTest {
             if (k != 2) {
                 isError = true;
             }
-            int[] exp = new int[] {2, 2};
+            int[] exp = new int[]{2, 2};
+            for (int i = 0; i < k - 1; i++) {
+                if (input[i] != exp[i]) {
+                    isError = true;
+                }
+            }
+            if (isError) {
+                System.out.println("ERROR");
+            } else {
+                System.out.println("PASS");
+            }
+        }
+        {
+            boolean isError = false;
+            int[] input = new int[]{0, 1, 2, 2, 3, 0, 4, 2};
+            int k = RemoveElement.removeElement(input, 2);
+            if (k != 5) {
+                isError = true;
+            }
+            int[] exp = new int[]{0, 1, 4, 0, 3};
             for (int i = 0; i < k - 1; i++) {
                 if (input[i] != exp[i]) {
                     isError = true;
