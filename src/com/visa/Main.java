@@ -13,5 +13,6 @@ public class Main {
         SortedSquareTest.test();
         DuplicateZeroTest.test();
         MergeTest.test();
+        RemoveElementTest.test();
     }
 }
