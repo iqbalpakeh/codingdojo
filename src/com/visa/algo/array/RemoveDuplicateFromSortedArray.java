@@ -31,6 +31,8 @@ package com.visa.algo.array;
 public class RemoveDuplicateFromSortedArray {
 
     public static int removeDuplicates(int[] nums) {
+        // look for previous or next item to see if any duplicate
+        // find the offset and remove
         return 0;
     }
 
