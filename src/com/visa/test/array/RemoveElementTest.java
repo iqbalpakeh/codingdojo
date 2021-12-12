@@ -31,7 +31,7 @@ public class RemoveElementTest {
             if (k != 5) {
                 isError = true;
             }
-            int[] exp = new int[]{0, 1, 4, 0, 3};
+            int[] exp = new int[]{0, 1, 3, 0, 4};
             for (int i = 0; i < k - 1; i++) {
                 if (input[i] != exp[i]) {
                     isError = true;

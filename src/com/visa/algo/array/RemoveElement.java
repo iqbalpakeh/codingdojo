@@ -34,8 +34,12 @@ public class RemoveElement {
     public static int removeElement(int[] nums, int val) {
         int k = nums.length;
         for (int i = 0; i < nums.length - 1; i++) {
+            if (i == k) {
+                return k;
+            }
             if (nums[i] == val) {
                 k = removeElementByOffset(nums, i, k);
+                i--;
             }
         }
         return k;
