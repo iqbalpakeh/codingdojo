@@ -32,6 +32,11 @@ package com.visa.algo.array;
 public class RemoveElement {
 
     public static int removeElement(int[] nums, int val) {
+        if (nums.length == 1) {
+            if (nums[0] == val) {
+                return 0;
+            }
+        }
         int k = nums.length;
         for (int i = 0; i < nums.length - 1; i++) {
             if (i == k) {
