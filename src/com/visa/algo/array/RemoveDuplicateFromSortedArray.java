@@ -30,24 +30,42 @@ package com.visa.algo.array;
 
 public class RemoveDuplicateFromSortedArray {
 
+    // OPTIMAL O(n)
+
     public static int removeDuplicates(int[] nums) {
-        // look for previous or next item to see if any duplicate
-        // find the offset and remove
-        int k = nums.length;
-        for (int i = 1; i < nums.length; i++) {
-            if (i < k && nums[i - 1] == nums[i]) {
-                k = removeElementByOffset(nums, i, k);
-                i--;
+        // optimal method is implemented with two pointer
+        // - i pointer track the ordered array
+        // - j pointer track current observed array
+        int i = 0;
+        for (int j = 1; j < nums.length; j++) {
+            if (nums[i] != nums[j]) {
+                i++;
+                nums[i] = nums[j];
             }
         }
-        return k;
+        return ++i;
     }
 
-    private static int removeElementByOffset(int[] nums, int offset, int size) {
-        for (int i = offset; i < size - 1; i++) {
-            nums[i] = nums[i + 1];
-        }
-        return --size;
-    }
+    // NON-OPTIMAL O(n2)
+
+    // public static int removeDuplicates(int[] nums) {
+    //     // look for previous or next item to see if any duplicate
+    //     // find the offset and remove
+    //     int k = nums.length;
+    //     for (int i = 1; i < nums.length; i++) {
+    //         if (i < k && nums[i - 1] == nums[i]) {
+    //             k = removeElementByOffset(nums, i, k);
+    //             i--;
+    //         }
+    //     }
+    //     return k;
+    // }
+    //
+    // private static int removeElementByOffset(int[] nums, int offset, int size) {
+    //     for (int i = offset; i < size - 1; i++) {
+    //         nums[i] = nums[i + 1];
+    //     }
+    //     return --size;
+    // }
 
 }
