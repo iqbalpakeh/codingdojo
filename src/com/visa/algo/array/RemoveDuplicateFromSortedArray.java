@@ -33,7 +33,14 @@ public class RemoveDuplicateFromSortedArray {
     public static int removeDuplicates(int[] nums) {
         // look for previous or next item to see if any duplicate
         // find the offset and remove
-        return 0;
+        int k = nums.length - 1;
+        for (int i = 1; i < nums.length; i++) {
+            if (nums[i - 1] == nums[i]) {
+                k = removeElementByOffset(nums, i, k);
+                i--;
+            }
+        }
+        return k;
     }
 
     private static int removeElementByOffset(int[] nums, int offset, int size) {
