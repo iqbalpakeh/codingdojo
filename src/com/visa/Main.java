@@ -15,5 +15,6 @@ public class Main {
         MergeTest.test();
         RemoveElementTest.test();
         RemoveDuplicateFromSortedArrayTest.test();
+        CheckIfExistTest.test();
     }
 }
